@@ -14,8 +14,6 @@ import QuartzCore
 
 class PushButtonVC: UIViewController, UIAlertViewDelegate {
 	
-	var massiv = [String]()
-	
 	@IBOutlet weak var counterShadowLabel: UILabel!
 	@IBOutlet weak var counterLabel: UILabel!
 	@IBOutlet weak var xButton: MyButton!
@@ -40,95 +38,31 @@ class PushButtonVC: UIViewController, UIAlertViewDelegate {
 		
 	}
 	
-	func request(){
-		
-		massiv = []
-		
-		let appDelegate = UIApplication.shared.delegate as! AppDelegate
-		let context = appDelegate.persistentContainer.viewContext
-		
-		do {
-			let results = try context.fetch(Counter.fetchRequest())
-			let get = results as! [Counter]
-			
-			for item in get {
-				massiv.append(item.name ?? "----")
-			}
-			
-		} catch {}
-	}
-	
-	func saveData(username: String, count: String){
-		
-		let appDelegate = (UIApplication.shared.delegate) as! AppDelegate
-		let context = appDelegate.persistentContainer.viewContext
-		
-		let user = Counter(context: context)
-		
-		user.name = username
-		user.count = count
-		
-		appDelegate.saveContext()
-	}
-	
 	@IBAction func addResult(_ sender: Any) {
-		self.generationAlert()
-	}
-	
-	func generationAlert() {
 		
-		let alertController = UIAlertController(title: "Назовите счётчик", message: "Сохраните результат вашего счисления", preferredStyle: .alert)
+		let alertController = UIAlertController(title: "Call counter", message: "Save the result of your calculation", preferredStyle: .alert)
 		
-		let saveAction = UIAlertAction(title: "Сохранить", style: .default, handler: {
+		let saveAction = UIAlertAction(title: "Save", style: .default, handler: {
 			alert -> Void in
 			
 			let firstTextField = alertController.textFields![0] as UITextField
 			
-			if let text = firstTextField.text{
-				if !self.massiv.isEmpty{
-					if self.massiv.contains(text) {
-						let alertVC = UIAlertController(title: "Ошибка", message: "Значение \(text) уже есть", preferredStyle: .alert)
-						let cancelAct = UIAlertAction(title: "Изменить", style: .cancel, handler: {
-							(action : UIAlertAction!) -> Void in
-						})
-						alertVC.addAction(cancelAct)
-						alertController.dismiss(animated: true, completion: nil)
-						self.present(alertVC, animated: true, completion: nil)
-						
-					} else {
-						self.saveData(username: text, count: self.counterLabel.text!)
-						self.request()
-						let alertVC1 = UIAlertController(title: "Сохранено!", message: "Значение \(text) было сохранено", preferredStyle: .alert)
-						let cancelAct = UIAlertAction(title: "Понятно", style: .default, handler: {
-							(action : UIAlertAction!) -> Void in
-						})
-						alertVC1.addAction(cancelAct)
-						self.present(alertVC1, animated: true, completion: nil)
-					}
-				} else{
-					self.saveData(username: text, count: self.counterLabel.text!)
-					self.request()
-					
-					let alertVC2 = UIAlertController(title: "Сохранено!", message: "Значение \(text) было сохранено", preferredStyle: .alert)
-					let cancelAct = UIAlertAction(title: "Понятно", style: .default, handler: {
-						(action : UIAlertAction!) -> Void in
-					})
-					alertVC2.addAction(cancelAct)
-					self.present(alertVC2, animated: true, completion: nil)
-				}
-			}
+			guard let text = firstTextField.text else { return }
+			guard let count = self.counterLabel.text else { return }
+			let counter = Counter()
+			counter.name = text
+			counter.count = Int(count)!
+			DBManager.shared.addData(object: counter)
+			self.presentAlert(withTitle: "Save", message: "Value \(text) has been saved or update")
 		})
 		
 		saveAction.isEnabled = false
 		
-		let cancelAction = UIAlertAction(title: "Отмена", style: .default, handler: {
-			(action : UIAlertAction!) -> Void in
-			
-		})
+		let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
 		
 		alertController.addTextField { (textField) in
 			
-			textField.placeholder = "Введите имя"
+			textField.placeholder = "Enter name"
 			NotificationCenter.default.addObserver(forName: UITextField.textDidChangeNotification, object: textField, queue: OperationQueue.main, using:
 				{_ in
 					
@@ -143,19 +77,6 @@ class PushButtonVC: UIViewController, UIAlertViewDelegate {
 		
 		self.present(alertController, animated: true, completion: nil)
 	}
-	
-	//Анимирование любого элемента наследованного от UIView
-	func animationScaleEffect(view:UIView,animationTime:Float){
-		UIView.animate(withDuration: TimeInterval(animationTime), animations: {
-			view.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-		},completion:{completion in
-			UIView.animate(withDuration: TimeInterval(animationTime), animations: { () -> Void in
-				view.transform = CGAffineTransform(scaleX: 1, y: 1)
-			})
-		})
-	}
-	
-	
 }
 
 @IBDesignable class MyButton: UIButton {
@@ -204,3 +125,23 @@ extension UIView {
 	}
 }
 
+extension UIViewController {
+	
+	func presentAlert(withTitle title: String, message : String) {
+		let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+		let OKAction = UIAlertAction(title: "OK", style: .default) { action in
+		}
+		alertController.addAction(OKAction)
+		self.present(alertController, animated: true, completion: nil)
+	}
+	
+	func animationScaleEffect(view:UIView,animationTime:Float){
+		UIView.animate(withDuration: TimeInterval(animationTime), animations: {
+			view.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+		},completion:{completion in
+			UIView.animate(withDuration: TimeInterval(animationTime), animations: { () -> Void in
+				view.transform = CGAffineTransform(scaleX: 1, y: 1)
+			})
+		})
+	}
+}

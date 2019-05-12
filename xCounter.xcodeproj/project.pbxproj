@@ -9,25 +9,28 @@
 /* Begin PBXBuildFile section */
 		8414AE001F90AB2B00A74C73 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8414ADFF1F90AB2B00A74C73 /* CoreData.framework */; };
 		84439A781FA270AA005CCC51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3B9461F82CCEC0057EFC2 /* Main.storyboard */; };
-		845CC7381FAB064E007A1020 /* Counter+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CC7361FAB064E007A1020 /* Counter+CoreDataClass.swift */; };
-		845CC7391FAB064E007A1020 /* Counter+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CC7371FAB064E007A1020 /* Counter+CoreDataProperties.swift */; };
 		845E3EA12288ACFE0019C3A3 /* Wakiki Shadow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 845E3E9F2288ACFE0019C3A3 /* Wakiki Shadow.ttf */; };
 		845E3EA22288ACFE0019C3A3 /* Wakiki.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 845E3EA02288ACFE0019C3A3 /* Wakiki.ttf */; };
+		845E3EA52288B79F0019C3A3 /* CounterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E3EA42288B79F0019C3A3 /* CounterManager.swift */; };
+		845E3EA82288B7FE0019C3A3 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E3EA62288B7FE0019C3A3 /* RealmSwift.framework */; };
+		845E3EA92288B7FE0019C3A3 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 845E3EA72288B7FE0019C3A3 /* Realm.framework */; };
+		845E3EAB2288B91F0019C3A3 /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845E3EAA2288B91F0019C3A3 /* CounterModel.swift */; };
 		8491BAE51F86BA7F00F7B084 /* PushButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491BAE41F86BA7F00F7B084 /* PushButtonVC.swift */; };
 		84B3B9431F82CCEC0057EFC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3B9421F82CCEC0057EFC2 /* AppDelegate.swift */; };
 		84B3B94A1F82CCEC0057EFC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B3B9491F82CCEC0057EFC2 /* Assets.xcassets */; };
 		84B3B94D1F82CCEC0057EFC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3B94B1F82CCEC0057EFC2 /* LaunchScreen.storyboard */; };
 		84F969D91F94E14600288BFA /* PoupUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F969D81F94E14600288BFA /* PoupUp.swift */; };
-		84F9C26F1FA30E43005939FA /* Counter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 84F9C26D1FA30E43005939FA /* Counter.xcdatamodeld */; };
 		84F9C2751FA47DCA005939FA /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F9C2741FA47DCA005939FA /* MyCustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8414ADFF1F90AB2B00A74C73 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		845CC7361FAB064E007A1020 /* Counter+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Counter+CoreDataClass.swift"; sourceTree = "<group>"; };
-		845CC7371FAB064E007A1020 /* Counter+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Counter+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		845E3E9F2288ACFE0019C3A3 /* Wakiki Shadow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wakiki Shadow.ttf"; sourceTree = "<group>"; };
 		845E3EA02288ACFE0019C3A3 /* Wakiki.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Wakiki.ttf; sourceTree = "<group>"; };
+		845E3EA42288B79F0019C3A3 /* CounterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterManager.swift; sourceTree = "<group>"; };
+		845E3EA62288B7FE0019C3A3 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		845E3EA72288B7FE0019C3A3 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		845E3EAA2288B91F0019C3A3 /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
 		8491BAE41F86BA7F00F7B084 /* PushButtonVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushButtonVC.swift; sourceTree = "<group>"; };
 		84B3B93F1F82CCEC0057EFC2 /* xCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B3B9421F82CCEC0057EFC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,7 +39,6 @@
 		84B3B94C1F82CCEC0057EFC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84B3B94E1F82CCEC0057EFC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F969D81F94E14600288BFA /* PoupUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoupUp.swift; sourceTree = "<group>"; };
-		84F9C26E1FA30E43005939FA /* Counter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Counter.xcdatamodel; sourceTree = "<group>"; };
 		84F9C2741FA47DCA005939FA /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -46,6 +48,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8414AE001F90AB2B00A74C73 /* CoreData.framework in Frameworks */,
+				845E3EA82288B7FE0019C3A3 /* RealmSwift.framework in Frameworks */,
+				845E3EA92288B7FE0019C3A3 /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,19 +59,27 @@
 		8414ADFE1F90AB2A00A74C73 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				845E3EA72288B7FE0019C3A3 /* Realm.framework */,
+				845E3EA62288B7FE0019C3A3 /* RealmSwift.framework */,
 				8414ADFF1F90AB2B00A74C73 /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8414AE081F90AE6B00A74C73 /* CoreData */ = {
+		845E3EAC2288B9260019C3A3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				845CC7361FAB064E007A1020 /* Counter+CoreDataClass.swift */,
-				845CC7371FAB064E007A1020 /* Counter+CoreDataProperties.swift */,
-				84F9C26D1FA30E43005939FA /* Counter.xcdatamodeld */,
+				845E3EA42288B79F0019C3A3 /* CounterManager.swift */,
 			);
-			name = CoreData;
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		845E3EAD2288B9370019C3A3 /* ModelsLayer */ = {
+			isa = PBXGroup;
+			children = (
+				845E3EAA2288B91F0019C3A3 /* CounterModel.swift */,
+			);
+			path = ModelsLayer;
 			sourceTree = "<group>";
 		};
 		84B3B9361F82CCEC0057EFC2 = {
@@ -95,7 +107,8 @@
 				8491BAE41F86BA7F00F7B084 /* PushButtonVC.swift */,
 				84F9C2741FA47DCA005939FA /* MyCustomCell.swift */,
 				84B3B9461F82CCEC0057EFC2 /* Main.storyboard */,
-				8414AE081F90AE6B00A74C73 /* CoreData */,
+				845E3EAD2288B9370019C3A3 /* ModelsLayer */,
+				845E3EAC2288B9260019C3A3 /* Managers */,
 				84B3B9491F82CCEC0057EFC2 /* Assets.xcassets */,
 				845E3E9F2288ACFE0019C3A3 /* Wakiki Shadow.ttf */,
 				845E3EA02288ACFE0019C3A3 /* Wakiki.ttf */,
@@ -115,6 +128,7 @@
 				84B3B93B1F82CCEC0057EFC2 /* Sources */,
 				84B3B93C1F82CCEC0057EFC2 /* Frameworks */,
 				84B3B93D1F82CCEC0057EFC2 /* Resources */,
+				845E3EA32288B6B70019C3A3 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -176,16 +190,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		845E3EA32288B6B70019C3A3 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Realm.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RealmSwift.framework",
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84B3B93B1F82CCEC0057EFC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				845CC7381FAB064E007A1020 /* Counter+CoreDataClass.swift in Sources */,
 				84F9C2751FA47DCA005939FA /* MyCustomCell.swift in Sources */,
+				845E3EA52288B79F0019C3A3 /* CounterManager.swift in Sources */,
+				845E3EAB2288B91F0019C3A3 /* CounterModel.swift in Sources */,
 				84B3B9431F82CCEC0057EFC2 /* AppDelegate.swift in Sources */,
-				845CC7391FAB064E007A1020 /* Counter+CoreDataProperties.swift in Sources */,
-				84F9C26F1FA30E43005939FA /* Counter.xcdatamodeld in Sources */,
 				8491BAE51F86BA7F00F7B084 /* PushButtonVC.swift in Sources */,
 				84F969D91F94E14600288BFA /* PoupUp.swift in Sources */,
 			);
@@ -331,6 +367,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/xCounter",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = xCounter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -351,6 +388,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/xCounter",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = xCounter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -384,19 +422,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		84F9C26D1FA30E43005939FA /* Counter.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				84F9C26E1FA30E43005939FA /* Counter.xcdatamodel */,
-			);
-			currentVersion = 84F9C26E1FA30E43005939FA /* Counter.xcdatamodel */;
-			path = Counter.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 84B3B9371F82CCEC0057EFC2 /* Project object */;
 }
