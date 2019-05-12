@@ -47,7 +47,7 @@ class PoupUpScoredView: UIViewController, UITableViewDataSource, UITableViewDele
                 arrayOfNames.append(item.name ?? "Unnamed")
                 arrayOfCounter.append(item.count ?? "0000")
             }
-            //если вы дочитали мой код до сюда, то вы не зря живёте
+            //если вы читаете это, то займитесь уже делом
         } catch {}
     }
     

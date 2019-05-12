@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUSH THIS!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qL-tn-Y96">
-                                <rect key="frame" x="61.5" y="70" width="197.5" height="43"/>
+                                <rect key="frame" x="62" y="70" width="197.5" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="UcI-AM-twS"/>
                                 </constraints>
@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PUSH THIS!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXS-4d-buQ" userLabel="PUSH THIS Shadow">
-                                <rect key="frame" x="61.5" y="70" width="197.5" height="43"/>
+                                <rect key="frame" x="62" y="70" width="197.5" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="PyW-XE-f5g"/>
                                 </constraints>
